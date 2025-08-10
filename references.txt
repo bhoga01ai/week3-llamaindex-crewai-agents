@@ -2,11 +2,14 @@ The following references are used for building llamaindex agents examples in thi
 
 1. https://docs.llamaindex.ai/en/stable/examples/agent/agent_workflow_basic/
 2. https://ai.google.dev/gemini-api/docs/llama-index   - Multi agent research agent
+3. https://medium.com/@sahin.samia/building-ai-agents-with-crewai-a-step-by-step-guide-172627e110c5 - CREWAI
+4. https://www.datacamp.com/tutorial/crew-ai - CREWAI
 
 The following references are used for building CREWAI agents examples in this repo
 https://github.com/codebasics/crewai-crash-course
 https://ai.google.dev/gemini-api/docs/crewai-example
 
 
+
 # observability
-https://app.phoenix.arize.com
+https://app.phoenix.arize.com 
