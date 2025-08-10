@@ -1,0 +1,105 @@
+{
+  "state": {
+    "state_data": {
+      "_data": {
+        "memory": "{\"__is_component\": true, \"value\": {\"chat_store\": {\"store\": {\"chat_history\": [{\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hello! How can I help you today?\\n\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"my name is Venkat\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hi Venkat, it's nice to meet you! How can I assist you today?\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"what is my name?\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Your name is Venkat.\"}]}]}, \"class_name\": \"SimpleChatStore\"}, \"chat_store_key\": \"chat_history\", \"token_limit\": 835584, \"class_name\": \"ChatMemoryBuffer\"}, \"qualified_name\": \"llama_index.core.memory.chat_memory_buffer.ChatMemoryBuffer\"}",
+        "state": "{}",
+        "max_iterations": "20",
+        "num_iterations": "1",
+        "formatted_input_with_state": "false",
+        "user_msg_str": "\"what is my name?\"",
+        "scratchpad": "[]",
+        "current_tool_calls": "[]"
+      }
+    },
+    "state_type": "DictState",
+    "state_module": "workflows.context.state_store"
+  },
+  "streaming_queue": "[\"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"input\\\": [{\\\"role\\\": \\\"system\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"You are a helpful assistant with access to web search capabilities. \\\\n    You can search the web for current information including:\\\\n    - Weather forecasts and current conditions\\\\n    - Latest news and events\\\\n    - Real-time data and updates\\\\n    - General information and facts\\\\n    \\\\n    When a user asks for information, especially current/live data like weather, \\\\n    you should use your web search tool to find the most up-to-date information.\\\\n    Always try to search for the information before saying you cannot provide it.\\\"}]}, {\\\"role\\\": \\\"user\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"hi\\\"}]}], \\\"current_agent_name\\\": \\\"Agent\\\"}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentInput\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\"Hello\\\", \\\"response\\\": \\\"Hello\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\"! How can I help you today?\\\\n\\\", \\\"response\\\": \\\"Hello! How can I help you today?\\\\n\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"response\\\": {\\\"role\\\": \\\"assistant\\\", \\\"additional_kwargs\\\": {\\\"thought_signatures\\\": [null], \\\"thoughts\\\": \\\"\\\", \\\"tool_calls\\\": []}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"Hello! How can I help you today?\\\\n\\\"}]}, \\\"structured_response\\\": null, \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": [], \\\"retry_messages\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentOutput\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {}, \\\"qualified_name\\\": \\\"workflows.events.StopEvent\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"input\\\": [{\\\"role\\\": \\\"system\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"You are a helpful assistant with access to web search capabilities. \\\\n    You can search the web for current information including:\\\\n    - Weather forecasts and current conditions\\\\n    - Latest news and events\\\\n    - Real-time data and updates\\\\n    - General information and facts\\\\n    \\\\n    When a user asks for information, especially current/live data like weather, \\\\n    you should use your web search tool to find the most up-to-date information.\\\\n    Always try to search for the information before saying you cannot provide it.\\\"}]}, {\\\"role\\\": \\\"user\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"hi\\\"}]}, {\\\"role\\\": \\\"assistant\\\", \\\"additional_kwargs\\\": {\\\"thought_signatures\\\": [null], \\\"thoughts\\\": \\\"\\\", \\\"tool_calls\\\": []}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"Hello! How can I help you today?\\\\n\\\"}]}, {\\\"role\\\": \\\"user\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"my name is Venkat\\\"}]}], \\\"current_agent_name\\\": \\\"Agent\\\"}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentInput\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\"Hi\\\", \\\"response\\\": \\\"Hi\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\" Venkat, it's nice to meet you! How can I assist you today\\\", \\\"response\\\": \\\"Hi Venkat, it's nice to meet you! How can I assist you today\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\"?\\\", \\\"response\\\": \\\"Hi Venkat, it's nice to meet you! How can I assist you today?\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"response\\\": {\\\"role\\\": \\\"assistant\\\", \\\"additional_kwargs\\\": {\\\"thought_signatures\\\": [null], \\\"thoughts\\\": \\\"\\\", \\\"tool_calls\\\": []}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"Hi Venkat, it's nice to meet you! How can I assist you today?\\\"}]}, \\\"structured_response\\\": null, \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": [], \\\"retry_messages\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentOutput\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {}, \\\"qualified_name\\\": \\\"workflows.events.StopEvent\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"input\\\": [{\\\"role\\\": \\\"system\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"You are a helpful assistant with access to web search capabilities. \\\\n    You can search the web for current information including:\\\\n    - Weather forecasts and current conditions\\\\n    - Latest news and events\\\\n    - Real-time data and updates\\\\n    - General information and facts\\\\n    \\\\n    When a user asks for information, especially current/live data like weather, \\\\n    you should use your web search tool to find the most up-to-date information.\\\\n    Always try to search for the information before saying you cannot provide it.\\\"}]}, {\\\"role\\\": \\\"user\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"hi\\\"}]}, {\\\"role\\\": \\\"assistant\\\", \\\"additional_kwargs\\\": {\\\"thought_signatures\\\": [null], \\\"thoughts\\\": \\\"\\\", \\\"tool_calls\\\": []}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"Hello! How can I help you today?\\\\n\\\"}]}, {\\\"role\\\": \\\"user\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"my name is Venkat\\\"}]}, {\\\"role\\\": \\\"assistant\\\", \\\"additional_kwargs\\\": {\\\"thought_signatures\\\": [null], \\\"thoughts\\\": \\\"\\\", \\\"tool_calls\\\": []}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"Hi Venkat, it's nice to meet you! How can I assist you today?\\\"}]}, {\\\"role\\\": \\\"user\\\", \\\"additional_kwargs\\\": {}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"what is my name?\\\"}]}], \\\"current_agent_name\\\": \\\"Agent\\\"}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentInput\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\"Your\\\", \\\"response\\\": \\\"Your\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"delta\\\": \\\" name is Venkat.\\\", \\\"response\\\": \\\"Your name is Venkat.\\\", \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentStream\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {\\\"response\\\": {\\\"role\\\": \\\"assistant\\\", \\\"additional_kwargs\\\": {\\\"thought_signatures\\\": [null], \\\"thoughts\\\": \\\"\\\", \\\"tool_calls\\\": []}, \\\"blocks\\\": [{\\\"block_type\\\": \\\"text\\\", \\\"text\\\": \\\"Your name is Venkat.\\\"}]}, \\\"structured_response\\\": null, \\\"current_agent_name\\\": \\\"Agent\\\", \\\"tool_calls\\\": [], \\\"retry_messages\\\": []}, \\\"qualified_name\\\": \\\"llama_index.core.agent.workflow.workflow_events.AgentOutput\\\"}\", \"{\\\"__is_pydantic\\\": true, \\\"value\\\": {}, \\\"qualified_name\\\": \\\"workflows.events.StopEvent\\\"}\"]",
+  "queues": {
+    "_done": "[]",
+    "aggregate_tool_results": "[]",
+    "call_tool": "[]",
+    "init_run": "[]",
+    "parse_agent_output": "[]",
+    "run_agent_step": "[]",
+    "setup_agent": "[]"
+  },
+  "stepwise": false,
+  "event_buffers": {},
+  "in_progress": {
+    "init_run": [],
+    "setup_agent": [],
+    "run_agent_step": [],
+    "parse_agent_output": [],
+    "_done": []
+  },
+  "accepted_events": [
+    [
+      "init_run",
+      "AgentWorkflowStartEvent"
+    ],
+    [
+      "setup_agent",
+      "AgentInput"
+    ],
+    [
+      "run_agent_step",
+      "AgentSetup"
+    ],
+    [
+      "parse_agent_output",
+      "AgentOutput"
+    ],
+    [
+      "init_run",
+      "AgentWorkflowStartEvent"
+    ],
+    [
+      "setup_agent",
+      "AgentInput"
+    ],
+    [
+      "run_agent_step",
+      "AgentSetup"
+    ],
+    [
+      "parse_agent_output",
+      "AgentOutput"
+    ],
+    [
+      "init_run",
+      "AgentWorkflowStartEvent"
+    ],
+    [
+      "setup_agent",
+      "AgentInput"
+    ],
+    [
+      "run_agent_step",
+      "AgentSetup"
+    ],
+    [
+      "parse_agent_output",
+      "AgentOutput"
+    ]
+  ],
+  "broker_log": [
+    "{\"__is_pydantic\": true, \"value\": {\"user_msg\": \"hi\", \"chat_history\": null, \"max_iterations\": null}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentWorkflowStartEvent\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"input\": [{\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}], \"current_agent_name\": \"Agent\"}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentInput\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"input\": [{\"role\": \"system\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"You are a helpful assistant with access to web search capabilities. \\n    You can search the web for current information including:\\n    - Weather forecasts and current conditions\\n    - Latest news and events\\n    - Real-time data and updates\\n    - General information and facts\\n    \\n    When a user asks for information, especially current/live data like weather, \\n    you should use your web search tool to find the most up-to-date information.\\n    Always try to search for the information before saying you cannot provide it.\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}], \"current_agent_name\": \"Agent\"}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentSetup\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"response\": {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hello! How can I help you today?\\n\"}]}, \"structured_response\": null, \"current_agent_name\": \"Agent\", \"tool_calls\": [], \"retry_messages\": []}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentOutput\"}",
+    "{\"__is_pydantic\": true, \"value\": {}, \"qualified_name\": \"workflows.events.StopEvent\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"user_msg\": \"my name is Venkat\", \"chat_history\": null, \"max_iterations\": null}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentWorkflowStartEvent\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"input\": [{\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hello! How can I help you today?\\n\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"my name is Venkat\"}]}], \"current_agent_name\": \"Agent\"}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentInput\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"input\": [{\"role\": \"system\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"You are a helpful assistant with access to web search capabilities. \\n    You can search the web for current information including:\\n    - Weather forecasts and current conditions\\n    - Latest news and events\\n    - Real-time data and updates\\n    - General information and facts\\n    \\n    When a user asks for information, especially current/live data like weather, \\n    you should use your web search tool to find the most up-to-date information.\\n    Always try to search for the information before saying you cannot provide it.\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hello! How can I help you today?\\n\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"my name is Venkat\"}]}], \"current_agent_name\": \"Agent\"}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentSetup\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"response\": {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hi Venkat, it's nice to meet you! How can I assist you today?\"}]}, \"structured_response\": null, \"current_agent_name\": \"Agent\", \"tool_calls\": [], \"retry_messages\": []}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentOutput\"}",
+    "{\"__is_pydantic\": true, \"value\": {}, \"qualified_name\": \"workflows.events.StopEvent\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"user_msg\": \"what is my name?\", \"chat_history\": null, \"max_iterations\": null}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentWorkflowStartEvent\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"input\": [{\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hello! How can I help you today?\\n\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"my name is Venkat\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hi Venkat, it's nice to meet you! How can I assist you today?\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"what is my name?\"}]}], \"current_agent_name\": \"Agent\"}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentInput\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"input\": [{\"role\": \"system\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"You are a helpful assistant with access to web search capabilities. \\n    You can search the web for current information including:\\n    - Weather forecasts and current conditions\\n    - Latest news and events\\n    - Real-time data and updates\\n    - General information and facts\\n    \\n    When a user asks for information, especially current/live data like weather, \\n    you should use your web search tool to find the most up-to-date information.\\n    Always try to search for the information before saying you cannot provide it.\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"hi\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hello! How can I help you today?\\n\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"my name is Venkat\"}]}, {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Hi Venkat, it's nice to meet you! How can I assist you today?\"}]}, {\"role\": \"user\", \"additional_kwargs\": {}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"what is my name?\"}]}], \"current_agent_name\": \"Agent\"}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentSetup\"}",
+    "{\"__is_pydantic\": true, \"value\": {\"response\": {\"role\": \"assistant\", \"additional_kwargs\": {\"thought_signatures\": [null], \"thoughts\": \"\", \"tool_calls\": []}, \"blocks\": [{\"block_type\": \"text\", \"text\": \"Your name is Venkat.\"}]}, \"structured_response\": null, \"current_agent_name\": \"Agent\", \"tool_calls\": [], \"retry_messages\": []}, \"qualified_name\": \"llama_index.core.agent.workflow.workflow_events.AgentOutput\"}",
+    "{\"__is_pydantic\": true, \"value\": {}, \"qualified_name\": \"workflows.events.StopEvent\"}"
+  ],
+  "is_running": false
+}

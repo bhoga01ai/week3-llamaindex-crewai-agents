@@ -1,0 +1,8 @@
+The following references are used for building llamaindex agents examples in this repo
+
+1. https://docs.llamaindex.ai/en/stable/examples/agent/agent_workflow_basic/
+2. https://ai.google.dev/gemini-api/docs/llama-index   - Multi agent research agent
+
+The following references are used for building CREWAI agents examples in this repo
+https://github.com/codebasics/crewai-crash-course
+https://ai.google.dev/gemini-api/docs/crewai-example

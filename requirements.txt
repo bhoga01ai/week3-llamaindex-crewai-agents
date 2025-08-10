@@ -1,0 +1,6 @@
+python-dotenv   # for API keys import
+llama-index     # for llamaindex framework
+llama-index-llms-google-genai   #  gemini model
+tavily-python   # search API 
+crewai[tools]
+google-generativeai  # CREWAI Embedding models
