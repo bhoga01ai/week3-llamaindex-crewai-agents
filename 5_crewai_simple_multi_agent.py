@@ -2,6 +2,9 @@
 
 from dotenv import load_dotenv
 load_dotenv()
+import os
+load_dotenv()
+os.environ["PHOENIX_CLIENT_HEADERS"] = f"api_key={os.getenv('PHOENIX_API_KEY')}"
 
 from crewai import LLM
 import os
@@ -9,6 +12,13 @@ from crewai import Agent, Task, Crew
 from crewai_tools import SerperDevTool
 from google.genai import types
 
+from phoenix.otel import register
+
+# configure the Phoenix tracer
+tracer_provider = register(
+  project_name="CrewAI-agent-proeject", # Default is 'default'
+  auto_instrument=True # Auto-instrument your app based on installed OI dependencies
+)
 # STEP 1: LLM
 
 

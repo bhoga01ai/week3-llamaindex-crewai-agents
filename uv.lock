@@ -2962,6 +2962,24 @@ wheels = [
 ]
 
 [[package]]
+name = "openinference-instrumentation-crewai"
+version = "0.1.11"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "openinference-instrumentation" },
+    { name = "openinference-semantic-conventions" },
+    { name = "opentelemetry-api" },
+    { name = "opentelemetry-instrumentation" },
+    { name = "opentelemetry-semantic-conventions" },
+    { name = "typing-extensions" },
+    { name = "wrapt" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7e/30/95276c074a257d8c6a92e7f92637eaf78c1f89fb6281e82f76c17c3d27d3/openinference_instrumentation_crewai-0.1.11.tar.gz", hash = "sha256:61234cce6aead3debd18a2b0eab6b8fb70776a268e14ae71f1f570d707e861aa", size = 10323, upload-time = "2025-07-16T21:17:37.841Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a3/7c/7a2ae73f88ea6ab1a6a6242a83aa3070859aafb3a9e5746250b0f6c4f275/openinference_instrumentation_crewai-0.1.11-py3-none-any.whl", hash = "sha256:096975809acc2326c409b5d3fb12cc264f1012f9d207b1b820b172e1b83a147a", size = 11845, upload-time = "2025-07-16T21:17:36.768Z" },
+]
+
+[[package]]
 name = "openinference-instrumentation-llama-index"
 version = "4.3.4"
 source = { registry = "https://pypi.org/simple" }
@@ -5138,6 +5156,7 @@ dependencies = [
     { name = "google-generativeai" },
     { name = "llama-index" },
     { name = "llama-index-llms-google-genai" },
+    { name = "openinference-instrumentation-crewai" },
     { name = "openinference-instrumentation-llama-index" },
     { name = "python-dotenv" },
     { name = "tavily-python" },
@@ -5150,6 +5169,7 @@ requires-dist = [
     { name = "google-generativeai", specifier = ">=0.8.5" },
     { name = "llama-index", specifier = ">=0.13.1" },
     { name = "llama-index-llms-google-genai", specifier = ">=0.3.0" },
+    { name = "openinference-instrumentation-crewai", specifier = ">=0.1.11" },
     { name = "openinference-instrumentation-llama-index", specifier = ">=4.3.4" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "tavily-python", specifier = ">=0.7.10" },

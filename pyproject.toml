@@ -10,6 +10,7 @@ dependencies = [
     "google-generativeai>=0.8.5",
     "llama-index>=0.13.1",
     "llama-index-llms-google-genai>=0.3.0",
+    "openinference-instrumentation-crewai>=0.1.11",
     "openinference-instrumentation-llama-index>=4.3.4",
     "python-dotenv>=1.1.1",
     "tavily-python>=0.7.10",
