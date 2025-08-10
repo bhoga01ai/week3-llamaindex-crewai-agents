@@ -4,3 +4,5 @@ llama-index-llms-google-genai   #  gemini model
 tavily-python   # search API 
 crewai[tools]
 google-generativeai  # CREWAI Embedding models
+arize-phoenix-otel   # arize observabiltiy 
+openinference-instrumentation-llama_index  # observabiltiy 

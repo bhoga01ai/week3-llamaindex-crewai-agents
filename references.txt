@@ -6,3 +6,7 @@ The following references are used for building llamaindex agents examples in thi
 The following references are used for building CREWAI agents examples in this repo
 https://github.com/codebasics/crewai-crash-course
 https://ai.google.dev/gemini-api/docs/crewai-example
+
+
+# observability
+https://app.phoenix.arize.com

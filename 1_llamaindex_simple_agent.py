@@ -19,10 +19,18 @@
 # 3. Agentframework - FunctionAgent from LlamaIndex  - Orchestrator
 # 4. Agent Execution
 
-# STEP 0 - env and import libraries
+# STEP 0 - env and import libraries, observabiltiy 
 from turtle import reset
 from dotenv import load_dotenv
+import os
 load_dotenv()
+os.environ["PHOENIX_CLIENT_HEADERS"] = f"api_key={os.getenv('PHOENIX_API_KEY')}"
+
+# Arize obsservability  
+from openinference.instrumentation.llama_index import LlamaIndexInstrumentor
+from phoenix.otel import register
+tracer_provider = register(project_name="llamaindex_agents_project")
+LlamaIndexInstrumentor().instrument(tracer_provider=tracer_provider)
 
 # import libraries
 from llama_index.llms.openai import OpenAI
