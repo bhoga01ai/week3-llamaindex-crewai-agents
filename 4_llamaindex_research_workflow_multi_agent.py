@@ -164,9 +164,9 @@ async def main():
     current_agent = None
     current_tool_calls = ""
     async for event in handler.stream_events():
-        if (isinstance(event, AgentInput
+        if (isinstance(event, AgentInput)
             and hasattr(event, "current_agent_name")
-            and event.current_agent_name != current_agent)
+            and event.current_agent_name != current_agent
         ):
             current_agent = event.current_agent_name
             print(f"\n{'='*50}")

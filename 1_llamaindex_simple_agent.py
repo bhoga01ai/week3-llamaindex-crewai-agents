@@ -82,7 +82,7 @@ async def search_web(query: str) -> str:
 agent = FunctionAgent(
     llm=llm,
     tools=[search_web],
-    system_prompt="""You are a helpful assistant with access to web search capabilities. 
+    system_prompt=""" You are a helpful assistant with access to web search capabilities. 
     You can search the web for current information including:
     - Weather forecasts and current conditions
     - Latest news and events
