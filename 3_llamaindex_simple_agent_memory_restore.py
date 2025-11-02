@@ -134,7 +134,7 @@ if __name__ == "__main__":
         
         # Save to file manually
         import json
-        with open("agent_state.json", "w") as f:
+        with open("agent_state.json", "a") as f:
             json.dump(ctx_dict, f, indent=2)
         
         print("Agent state saved to agent_state.json")

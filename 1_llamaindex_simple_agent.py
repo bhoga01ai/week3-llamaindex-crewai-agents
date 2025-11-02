@@ -39,7 +39,7 @@ from openinference.instrumentation.llama_index import LlamaIndexInstrumentor
 from phoenix.otel import register
 
 tracer_provider = register(
-  project_name="llamaindex_agents_project",
+  project_name="my_llamaindex_agents_project",
   endpoint="https://app.phoenix.arize.com/s/bhoga01-ai/v1/traces",
   auto_instrument=True
 )

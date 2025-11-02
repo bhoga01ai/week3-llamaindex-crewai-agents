@@ -23,7 +23,7 @@ tracer_provider = register(
 
 
 llm = LLM(
-    model="gemini-2.5-flash",temperature=0.0,
+    model="gemini-2.5-flash-lite",temperature=0.0,
     generation_config=types.GenerateContentConfig(
         thinking_config=types.ThinkingConfig(
             thinking_budget=0
@@ -53,6 +53,7 @@ task1 = Task(
     description="Find 3-5 interesting and recent facts about {topic} as of year 2025.",
     expected_output="A bullet list of 3-5 facts",
     agent=research_agent,
+     output_file="./task1_output.txt"
 )
 
 task2 = Task(
@@ -78,7 +79,8 @@ crew = Crew(
     }
 )
 
+
 # STEP 5:  Run the crew
 
 # crew.kickoff(inputs={"topic": "The future of electrical vehicles"})
-crew.kickoff(inputs={"topic": "What is the revenue outlook in this sector?"})
+crew.kickoff(inputs={"topic": "What is the revenue outlook in IT sector?"})
