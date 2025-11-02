@@ -27,13 +27,26 @@ load_dotenv()
 os.environ["PHOENIX_CLIENT_HEADERS"] = f"api_key={os.getenv('PHOENIX_API_KEY')}"
 
 # Arize obsservability  
+## What This Enables:
+# - Performance Monitoring - Track response times, token usage, and costs
+# - Debugging - See detailed traces of agent reasoning and tool calls
+# - Error Tracking - Identify and diagnose issues in your AI pipeline
+# - Usage Analytics - Monitor how your agents are being used
+# - Visual Interface - View all this data in Phoenix's web dashboard
+# This is particularly valuable for debugging complex agent workflows and understanding how your LlamaIndex agents are performing in production.
+
 from openinference.instrumentation.llama_index import LlamaIndexInstrumentor
 from phoenix.otel import register
-tracer_provider = register(project_name="llamaindex_agents_project")
+
+tracer_provider = register(
+  project_name="llamaindex_agents_project",
+  endpoint="https://app.phoenix.arize.com/s/bhoga01-ai/v1/traces",
+  auto_instrument=True
+)
+
 LlamaIndexInstrumentor().instrument(tracer_provider=tracer_provider)
 
 # import libraries
-from llama_index.llms.openai import OpenAI
 from llama_index.llms.google_genai import GoogleGenAI
 from google.genai import types
 from tavily import AsyncTavilyClient
