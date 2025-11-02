@@ -8,4 +8,3 @@ arize-phoenix-otel   # arize observabiltiy
 openinference-instrumentation-llama_index  # observabiltiy 
 openinference-instrumentation-crewai  # observabiltiy for CREWAI
 
-
