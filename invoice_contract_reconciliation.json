@@ -1,0 +1,95 @@
+```json
+{
+  "matched_fields": [
+    "supplier_name",
+    "currency",
+    "purchase_order_number"
+  ],
+  "discrepancies": [
+    {
+      "field": "invoice_number",
+      "invoice_value": "INV-2023-001",
+      "contract_value": "N/A",
+      "severity": "informational",
+      "rationale": "Invoice number is specific to the invoice and not typically found in a general contract."
+    },
+    {
+      "field": "invoice_date",
+      "invoice_value": "2023-10-26",
+      "contract_value": "N/A",
+      "severity": "informational",
+      "rationale": "Invoice date is specific to the invoice and not typically found in a general contract."
+    },
+    {
+      "field": "total_amount",
+      "invoice_value": "1,200.00 USD",
+      "contract_value": "The total contract value is not explicitly stated as a single sum in the provided contract terms, but rather implies pricing per unit or service.",
+      "severity": "medium",
+      "rationale": "The invoice provides a specific total amount, while the contract outlines pricing mechanisms rather than a fixed total for this specific transaction."
+    },
+    {
+      "field": "taxes",
+      "invoice_value": "100.00 USD (10%)",
+      "contract_value": "All prices are exclusive of applicable taxes, duties, and levies, which shall be added to the invoice at the prevailing rates.",
+      "severity": "low",
+      "rationale": "The invoice specifies the exact tax amount and rate. The contract states that taxes will be added at prevailing rates, which is consistent, but doesn't specify the exact rate or amount for this transaction."
+    },
+    {
+      "field": "payment_terms",
+      "invoice_value": "Net 30 days",
+      "contract_value": "Payment terms are Net 45 days from the invoice date.",
+      "severity": "high",
+      "rationale": "The invoice states 'Net 30 days', while the contract specifies 'Net 45 days'. This is a direct mismatch in payment terms."
+    },
+    {
+      "field": "due_date",
+      "invoice_value": "2023-11-25",
+      "contract_value": "Based on Net 45 days from invoice date (2023-10-26), the due date would be 2023-12-10.",
+      "severity": "high",
+      "rationale": "The invoice due date (2023-11-25) is calculated based on Net 30 days. The contract's Net 45 days term would result in a due date of 2023-12-10. This is a direct mismatch due to differing payment terms."
+    },
+    {
+      "field": "late_fees",
+      "invoice_value": "N/A (not explicitly stated on invoice)",
+      "contract_value": "Late payments will incur an interest charge of 1.5% per month or the maximum rate permitted by law, whichever is lower.",
+      "severity": "medium",
+      "rationale": "The invoice does not explicitly state late fees, whereas the contract clearly defines a late payment interest charge. This could lead to confusion if payment is delayed."
+    },
+    {
+      "field": "discounts",
+      "invoice_value": "N/A (not explicitly stated on invoice)",
+      "contract_value": "No discounts are mentioned in the provided contract terms.",
+      "severity": "informational",
+      "rationale": "Neither the invoice nor the contract explicitly mention any discounts for this transaction."
+    }
+  ],
+  "missing_in_invoice": [],
+  "missing_in_contract": [
+    "invoice_number",
+    "invoice_date"
+  ],
+  "line_item_discrepancies": [
+    {
+      "description": "Consulting Services",
+      "issue": "Unit Price Mismatch",
+      "invoice_value": "100.00 USD",
+      "contract_value": "The contract specifies a rate of $120 per hour for consulting services.",
+      "rationale": "The invoice lists a unit price of $100.00 for Consulting Services, while the contract specifies a rate of $120 per hour for consulting services. This is a direct mismatch in the agreed-upon unit price."
+    },
+    {
+      "description": "Software License",
+      "issue": "Unit Price Mismatch",
+      "invoice_value": "500.00 USD",
+      "contract_value": "The contract specifies a one-time fee of $450 for a standard software license.",
+      "rationale": "The invoice lists a unit price of $500.00 for a Software License, while the contract specifies a one-time fee of $450 for a standard software license. This is a direct mismatch in the agreed-upon unit price."
+    },
+    {
+      "description": "Support Hours",
+      "issue": "Missing Item in Contract",
+      "invoice_value": "200.00 USD (2 hours @ $100/hour)",
+      "contract_value": "N/A",
+      "rationale": "The invoice includes 'Support Hours' as a line item, but there is no explicit mention or pricing for 'Support Hours' in the provided contract terms. The contract mentions 'post-implementation support' but does not specify it as a billable line item with a unit price."
+    }
+  ]
+}
+```

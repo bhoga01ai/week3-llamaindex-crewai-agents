@@ -16,7 +16,7 @@ from phoenix.otel import register
 
 # configure the Phoenix tracer
 tracer_provider = register(
-  project_name="CrewAI-agent-proeject", # Default is 'default'
+  project_name="CrewAI-agent-proeject-sunday", # Default is 'default'
   auto_instrument=True # Auto-instrument your app based on installed OI dependencies
 )
 # STEP 1: LLM

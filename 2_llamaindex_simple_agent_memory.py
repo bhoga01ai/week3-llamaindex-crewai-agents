@@ -37,6 +37,20 @@ from llama_index.core.agent.workflow import FunctionAgent
 import asyncio
 from llama_index.core.workflow import Context
 from llama_index.core.workflow import JsonPickleSerializer, JsonSerializer
+import os
+os.environ["PHOENIX_CLIENT_HEADERS"] = f"api_key={os.getenv('PHOENIX_API_KEY')}"
+
+from openinference.instrumentation.llama_index import LlamaIndexInstrumentor
+from phoenix.otel import register
+
+tracer_provider = register(
+  project_name="llamaindex_agents_project-sunday",
+  endpoint="https://app.phoenix.arize.com/s/bhoga01-ai/v1/traces",
+  auto_instrument=True
+)
+
+LlamaIndexInstrumentor().instrument(tracer_provider=tracer_provider)
+
 #STEP 1. LLM  - openAI
 
 # llm = OpenAI(model="gpt-4o-mini", temperature=0.5)
@@ -76,13 +90,19 @@ async def search_web(query: str) -> str:
         print(f"Search error: {error_message}")
         return f"Search failed: {error_message}"
 
+
+
+async def add_two_numbers(a: float, b: float) -> float:
+    return float(a) + float(b)
+
+
 # STEP 3
 # create an functon agent 
 agent = FunctionAgent(
     llm=llm,
-    tools=[search_web],
-    system_prompt="""You are a helpful assistant with access to web search capabilities. 
-    You can search the web for current information including:
+    tools=[search_web, add_two_numbers],
+    system_prompt="""You are a helpful assistant with access to web search and arithmetic capabilities. 
+    You can search the web using tool:`search_web` for current information including:
     - Weather forecasts and current conditions
     - Latest news and events
     - Real-time data and updates
@@ -90,7 +110,8 @@ agent = FunctionAgent(
     
     When a user asks for information, especially current/live data like weather, 
     you should use your web search tool to find the most up-to-date information.
-    Always try to search for the information before saying you cannot provide it.""",
+    Always try to search for the information before saying you cannot provide it.
+    You can also add two numbers using tool:`add_two_numbers` when asked to perform addition.""",
 )
 # STEP 4 ADD state to agent.
 
@@ -127,7 +148,6 @@ if __name__ == "__main__":
         print("Agent state saved to agent_state.json")
     except Exception as e:
         print(f"Error saving state: {e}")
-
 
 
 
