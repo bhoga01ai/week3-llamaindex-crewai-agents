@@ -82,12 +82,26 @@ async def record_notes(ctx: Context, notes: str, notes_title: str) -> str:
     await ctx.store.set("state", current_state)
     return "Notes recorded."
 
-async def write_report(ctx: Context, report_content: str) -> str:
+async def write_report(ctx: Context) -> str:
     """Useful for writing a report on a given topic."""
     current_state = await ctx.store.get("state")
-    current_state["report_content"] = report_content
+    topic = current_state.get("topic", "No topic set")
+    notes = current_state.get("research_notes", "No notes recorded")
+    response = await llm.acomplete(
+        f"""Please write a report on the topic: {topic}. """
+        f"""The research notes are as follows: \n{notes}. """
+        f"""Please write a comprehensive report based on these notes."""
+    )
+    current_state["report_content"] = str(response)
     await ctx.store.set("state", current_state)
     return "Report written."
+
+async def set_topic(ctx: Context, topic: str) -> str:
+    """Useful for setting the topic of research."""
+    current_state = await ctx.store.get("state")
+    current_state["topic"] = topic
+    await ctx.store.set("state", current_state)
+    return "Topic set."
 
 async def review_report(ctx: Context, review: str) -> str:
     """Useful for reviewing a report and providing feedback."""
@@ -103,10 +117,11 @@ research_agent = FunctionAgent(
     description="Useful for searching the web for information on a given topic and recording notes on the topic.",
     system_prompt=(
         "You are the ResearchAgent that can search the web for information on a given topic and record notes on the topic. "
+        "Before you start your research, you should first set the topic of research. "
         "Once notes are recorded and you are satisfied, you should hand off control to the WriteAgent to write a report on the topic."
     ),
     llm=llm,
-    tools=[search_web, record_notes],
+    tools=[search_web, record_notes, set_topic],
     can_handoff_to=["WriteAgent"],
 )
 
@@ -114,7 +129,7 @@ write_agent = FunctionAgent(
     name="WriteAgent",
     description="Useful for writing a report on a given topic.",
     system_prompt=(
-        "You are the WriteAgent that can write a report on a given topic. "
+        "You are the WriteAgent that can write a report based on the research notes from the ResearchAgent. "
         "Your report should be in a markdown format. The content should be grounded in the research notes. "
         "Once the report is written, you should get feedback at least once from the ReviewAgent."
     ),
@@ -141,6 +156,7 @@ agent_workflow = AgentWorkflow(
     agents=[research_agent, write_agent, review_agent],
     root_agent=research_agent.name,
     initial_state={
+        "topic": "",
         "research_notes": {},
         "report_content": "Not written yet.",
         "review": "Review required.",
